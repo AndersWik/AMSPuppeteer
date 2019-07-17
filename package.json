@@ -1,0 +1,19 @@
+{
+  "name": "amspuppet",
+  "version": "1.0.0",
+  "description": "Crawler for collecting jobs from \"arbetsformedlingen.se\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AMS",
+    "arbetsförmedlingen"
+  ],
+  "author": "Anders Wik",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.1.0",
+    "puppeteer": "^1.18.0"
+  }
+}
