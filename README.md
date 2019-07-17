@@ -68,9 +68,9 @@ Server running at http://localhost:5601
 
 When Kibana is running the data can be displayed in different types of diagrams.
 
-* <img src="https://github.com/AndersWik/AMSPuppeteer/raw/develop/docs/kibana-diagrams.png?sanitize=true" alt="Copy" width="40">
+* <img src="https://github.com/AndersWik/AMSPuppeteer/raw/develop/docs/kibana-diagrams.png?sanitize=true" alt="diagrams" width="600">
 
-* <img src="https://github.com/AndersWik/AMSPuppeteer/raw/develop/docs/kibana-map.png?sanitize=true" alt="Copy" width="40">
+* <img src="https://github.com/AndersWik/AMSPuppeteer/raw/develop/docs/kibana-map.png?sanitize=true" alt="map" width="600">
 
 To display the geo points correctly go to the Kibana dev tools console. Then copy paste the commands from `docs/elasticsearch.md` into the command promt. This will add a `index` called `ams` and the mapping for the index. Since we are using a different index name then the deafult `elasticsearch` name we need to add a `elasticsearch.json` config file. Create a file called `elasticsearch.json` in the config folder and add the following.
 
