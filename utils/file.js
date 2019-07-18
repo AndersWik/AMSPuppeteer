@@ -22,6 +22,10 @@ module.exports = {
     {
         return './jobs/exported/'+id+'.json';
     },
+    amsConfig: function ()
+    {
+        return './config/ams.json';
+    },
     puppeteerConfig: function ()
     {
         return './config/puppeteer.json';

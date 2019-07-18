@@ -10,20 +10,27 @@ module.exports = {
 
         (async () => {
 
+            let jsonAms = await configHelper.getAmsConfig();
+
+            if(jsonAms.profession !== undefined && Number.isInteger(jsonAms.profession))
+            {
+                pathHelper.setProfession(jsonAms.profession);
+            }
+
             timeHelper.start();
 
             let config = {};
 
-            let json = await configHelper.getPuppeteerConfig();
+            let jsonPuppeteer = await configHelper.getPuppeteerConfig();
 
-            if(json.headless !== undefined)
+            if(jsonPuppeteer.headless !== undefined)
             {
-                config.headless = json.headless;
+                config.headless = jsonPuppeteer.headless;
             }
 
-            if(json.executablePath !== undefined)
+            if(jsonPuppeteer.executablePath !== undefined)
             {
-                config.executablePath = json.executablePath;
+                config.executablePath = jsonPuppeteer.executablePath;
             }
     
             const browser = await puppeteer.launch(config);

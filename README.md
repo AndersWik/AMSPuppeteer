@@ -1,6 +1,6 @@
 # AMS Puppet
 
-The AMS Puppet app will fetch all jobs from the Data/IT section from `ams.se`. All job ad's can be fetched and saved as json without Elasticsearch. Elasticsearch is needed to export the json files. All example diagrams are from Kibana.
+The AMS Puppet app will fetch all jobs from a selected category on `ams.se`. The default category is Data/IT. All job ads can be fetched and saved as json without Elasticsearch. Elasticsearch is needed to export the json files. All example diagrams are from Kibana.
 
 ## Options
 
@@ -11,7 +11,15 @@ The AMS Puppet app will fetch all jobs from the Data/IT section from `ams.se`. A
 
 ## Config
 
-If we add a `puppeteer.json` file in the config folder we can make some configuration. We can set values for `headless` and `executablePath`. The `executablePath` can be used if we want to use a different browser than Chromium like Google Chrome.
+The selected category is defined in `ams.json`. The category is a integer between 1 and 22. With the exception of 21.
+
+``` json
+{ 
+    "profession": 3
+}
+```
+
+In the file `puppeteer.json` in the config folder we can make Puppeteer configurations. We can set values for `headless` and `executablePath`. The `executablePath` can be used if we want to use a different browser than Chromium like Google Chrome.
 
 ``` json
 {
@@ -20,7 +28,7 @@ If we add a `puppeteer.json` file in the config folder we can make some configur
 }
 ```
 
-If we add a `elasticsearch.json` file in the config folder we can set what node elasticsearch is listening to and what the index name is.
+In the `elasticsearch.json` file in the config folder we can set what node Elasticsearch is listening to and what the index name is.
 
 ``` json
 { 

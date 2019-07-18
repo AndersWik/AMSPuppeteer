@@ -2,6 +2,12 @@
 const fileHelper = require('./file.js');
 
 module.exports = {
+    getAmsConfig: async function ()
+    {
+        let path = await fileHelper.amsConfig();
+        let json = await getConfig(path);
+        return json;
+    },
     getPuppeteerConfig: async function ()
     {
         let path = await fileHelper.puppeteerConfig();
